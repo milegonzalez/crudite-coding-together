@@ -3,13 +3,27 @@ $(document).ready(function(){
   //create a function stuf for read/write/delet/
       // research local storage
 
+//remember not to push node files.
 
 //jquere selection template.
-  $().on('click' , function(){
+  // $('').on('click' , function(){
+  //
+  // });
 
+  $('.store-btn').on('click', function(event){
+    // event.preventDefault();
+    // event.stopPropagation();
+    localStorage.setItem('hrext', "three three three")
   });
 
-  $().on('click' , function(){
 
-  });    
+  $('.get-btn').on('click', function(event){
+    console.log(localStorage.getItem('hrext'));
+  });
+
+  $('.delete-btn').on('click', function(event){
+    console.log(localStorage.removeItem('hrext'));
+  });
+
+
 });
