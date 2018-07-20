@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 //remember not to push node files.
 
-//jquere selection template.
+//jquery selection template.
   // $('').on('click' , function(){
   //
   // });
@@ -13,26 +13,39 @@ $(document).ready(function(){
   $('.store-btn').on('click', function(event){
     // event.preventDefault();
     // event.stopPropagation();
-    let titleValue = $('.input-field-title').val();
-    let contentValue = $('.input-field-body').val();
+    let author = $('.input-field-author').val();
+    let message = $('.input-field-message').val();
 
-    localStorage.setItem('titleValue', titleValue);
-    localStorage.setItem('contentValue', contentValue);
+    localStorage.setItem('author', author);
+    localStorage.setItem('message', message);
   });
+
+
+    $('.set-reminder-btn').on('click', function(event){
+      let author = $('.input-field-author').val();
+      let message = $('.input-field-message').val();
+
+      alert(`${author} ${message}`);
+    });
 
 
   $('.get-btn').on('click', function(event){
-    // console.log(localStorage.getItem('hrext'));
+    let author = localStorage.getItem('author');
+    let message = localStorage.getItem('message');
 
-    let titleValue = localStorage.getItem('titleValue');
-    let contentValue = localStorage.getItem('contentValue');
-
-    $('.debug').html(`<p>${titleValue} ${contentValue}</p>`);
+    $('.debug').html(`<p>${author} ${message}</p>`);
   });
+
 
   $('.delete-btn').on('click', function(event){
-    console.log(localStorage.removeItem('hrext'));
+    // console.log(localStorage.removeItem('hrext'));
+    localStorage.removeItem('author');
+    localStorage.removeItem('message');
+
+    $('.debug').html(`<p>Items deleted</p>`);
   });
+
+
 
 
 });

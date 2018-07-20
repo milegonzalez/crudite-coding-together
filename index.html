@@ -13,15 +13,30 @@
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
   <script src="app.js"></script>
+
   </head>
   <body>
-    <div>
-        <input class="input-field-title" type="text">
-        <input class="input-field-body" type="text">
-        <button class="store-btn">Store Data</button>
-        <button class="get-btn">Get Data</button>
-        <button class="delete-btn">Delete Data</button>
+    <div class="title">
+      <p>SAVE YOUR FAVORITE QUOTE!</p>
+    </div>
+    <div class="container">
+        <p>Who's the Author?</p>
+        <input id="author-box" class="input-field-author" type="text" placeholder="Enter the Author!">
+        <br>
+        <p>What quote would you like to be reminded of?</p>
+        <textarea id="message-box" class="input-field-message" placeholder="Enter Quote!"></textarea>
+        <br>
+        <br>
+        <button id="btn" class="store-btn">Store Quote</button>
+        <button id="btn" class="set-reminder-btn"> Set Reminder </button>
+        <button id="btn" class="get-btn">Return Message</button>
+        <button id="btn" class="delete-btn">Delete Message</button>
+
+
+        <div class="debug">
+        </div>
     </div>
   </body>
 </html>

@@ -1,0 +1,42 @@
+.container {
+  margin: 0 auto;
+	/*width: 800px;*/
+	font-family: 'Oswald', sans-serif;
+	font-size: 12pt;
+	text-align: center;
+  /*display: flex;*/
+  /*justify-content: center;*/
+}
+
+
+button {
+  background-color: #36c49c;
+  font-family: 'Oswald', sans-serif;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+}
+
+
+.title {
+  margin: 0 auto;
+	/*width: 800px;*/
+	font-family: 'Oswald', sans-serif;
+	font-size: 18pt;
+  font-weight: bolder;
+	text-align: center;
+}
+
+#message-box {
+  height: 100px;
+  width: 300px;
+}
+
+#author-box {
+  width: 300px;
+}
